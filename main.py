@@ -12,8 +12,8 @@ class user:
 list_unsorted = []
 with open("BIT605_unsorted_data.csv") as csv_file:
   reader = csv.reader(csv_file, delimiter=",")
-  for i in list(csv_file):
-    list_unsorted.append(user((i.rsplit(',')[0]), (i.rsplit(',')[2]), (i.rsplit(',')[1]), (i.rsplit(',')[3])))
+  for row in reader:
+    list_unsorted.append(user(row[0], row[1], row[2], row[3])),       reader.__next__
 
 #Binary Search Tree
 class Node:
