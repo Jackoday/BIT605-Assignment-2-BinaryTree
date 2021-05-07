@@ -51,7 +51,7 @@ class Node:
   def findUser(self, search):
     if search < self.userID:
       if self.left is None:
-        return str(search)+" is not Found"
+        return str(search)+" is not found"
       return self.left.findUser(search)
     elif search > self.userID:
       if self.right is None:
